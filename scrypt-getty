@@ -1,0 +1,21 @@
+#!/bin/bash
+echo "--------------------------------"
+find / -type f -name "Gettyimages-*\(1\).jpg"
+echo "--------------------------------"
+echo "Remove all this files? (Y/N)"
+read ans
+if [ $ans == "N" ] || [ $ans == "n" ]; then
+	continue
+elif [ $ans == "Y" ] || [ $ans == "y" ]; then
+	rm -rf Gettyimages-*\(1\).jpg
+fi
+echo "--------------------------------"
+find / -type f -name "Gettyimages-*.jpg"
+echo "--------------------------------"
+echo "Move all this files to /Zdj? (Y/N)"
+read ans1
+if [ $ans1 == "N" ] || [ $ans1 == "n" ]; then
+	continue
+elif [ $ans1 == "Y" ] || [ $ans1 == "y" ]; then
+	mv Gettyimages-*.jpg ~/Zdj
+fi

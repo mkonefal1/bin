@@ -1,0 +1,9 @@
+#!/bin/zsh
+
+#adding aliases automatically
+
+echo "alias $1" >>~/.slimzsh/aliases.zsh
+
+source ~/.slimzsh/aliases.zsh
+
+echo "$1 added to aliases successfully!"
